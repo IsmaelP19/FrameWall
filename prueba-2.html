@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de prueba</title>
+        <!--Bootstrap import-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+        <style>
+
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: #eee;
+                font-family: Arial, Helvetica, sans-serif;
+                margin-left: 0;
+                
+            }
+
+
+
+            .button-menu1 {
+                background-color: #47525E;
+                border: 2px solid #47525E;
+                border-radius: 12px;
+                width: 13%;
+
+            }
+
+
+            .text1, .text1:hover {
+                outline: none;
+                text-decoration: none;
+                font-size: 100%;
+                color: #ffffff;
+                font-family: Arial, Helvetica, sans-serif;
+                width: 50%;
+                text-align: center;
+                
+            }
+
+
+
+            
+            .button-menu2 {
+                background-color: rgba(255, 255, 255, 0);
+                border: 2px solid #47525E;
+                border-radius: 12px;
+                width: 13%;
+                height: 30%;
+            }
+
+            .text2, .text2:hover {
+                outline: none;
+                text-decoration: none;
+                color: #47525E;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 100%;
+                width: 50%;
+                text-align: center;
+            }
+
+
+            .logo {
+                padding-top: 2%;
+                margin-right: 5%;
+                margin-left: 5%;
+                /*resize: vertical;*/
+                height: 20%;
+                width: 20%;
+            }
+
+            
+            /*.gallery {
+                display: grid;
+                grid-auto-rows: 250px;
+                grid-gap: 1rem;
+                grid-auto-flow: row dense;
+            }*/
+
+            
+            .grid-gallery__image {
+                filter: grayscale(100%);
+                transition: filter 1s;
+            }
+
+            .grid-gallery__image:hover {
+                filter: grayscale(0);
+            }
+
+            .grid-gallery__item {
+                transition: transform ease-in-out 0.3s;
+                
+            }
+            
+            .grid-gallery__item:hover {
+                transform: scale(1.05);
+            }
+
+
+
+            .grid-gallery {
+                display: grid;
+                grid-auto-rows: 120px;
+                grid-gap: 0.8rem;
+                grid-auto-flow: row dense;
+            }
+
+            .grid-gallery__item:nth-child(1) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+            .grid-gallery__item:nth-child(2) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+            .grid-gallery__item:nth-child(3) {
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+            .grid-gallery__item:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 3;
+            }
+
+            .grid-gallery__item:nth-child(5) {
+                grid-column: span 1;
+                grid-row: span 3;
+            }
+
+            .grid-gallery__item:nth-child(6) {
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+
+            .grid-gallery__item:nth-child(7) {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .grid-gallery__item:nth-child(8) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+
+            .grid-gallery__image {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+
+
+            
+            #navbar ul {
+                margin: 0;
+                padding: 5px;
+                list-style-type: none;
+                text-align: center;
+               
+            }
+
+            #navbar ul button {
+                display: inline;
+            }
+            
+
+
+            #boton1 {
+                margin-right: 5%;
+            }
+
+            #boton3 {
+                margin-right: 5%;
+            }
+
+            @media all and (max-width: 320px) {
+                .grid-gallery {
+                    grid-template-columns: 1fr;
+                }
+
+                #navbar {
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: .5rem 1rem;
+                }
+
+            }
+            @media all and (max-width: 768PX) {
+                .grid-gallery {
+                    grid-template-columns: repeat(3, 1fr);
+                }  
+
+                #navbar {
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    /*justify-content: space-between;*/
+                    padding: .5rem 1rem;
+                }
+
+
+                
+            }
+            @media (min-width: 1024px) {
+                .grid-gallery {
+                    grid-template-columns: repeat(5, 1fr);
+                }
+
+
+
+
+
+                
+            }
+
+
+
+            .navbar-toggler {
+                color: rgba(0,0,0,.5);
+                /*border: 2px solid rgba(0,0,0,.5);*/
+                display: inline-block;
+                margin: auto;
+
+            }
+
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            }
+
+            #navbarToggle {
+                background-color: #47525E;
+            }
+
+            .nav-link, .nav-link:hover {
+                text-decoration: none;
+                outline: none;
+                color:hsl(0, 0%, 100%)
+            }
+
+
+
+
+            
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <nav id="navbar">
+
+            <!-- Show this only on mobile to medium screens -->
+            <img src="Fotos prototipo/logo/logo_small_icon_only.png" id="logo-pequenio" class="navbar-brand d-lg-none d-md-none" href="#" style="height: 15%; width: 15%; border-radius:100%; margin: auto; ">
+            <button class="navbar-toggler d-lg-none d-md-none" type="button" id="toggler" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Use flexbox utility classes to change how the child elements are justified-->
+            <div class="collapse navbar-collapse justify-content-between" id="navbarToggle">
+
+                <ul class="navbar-nav">
+                    <li class="navbar-item">
+                        <a class="nav-link" href="#">Trending</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="#">Categorías</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="#">Iniciar sesión</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a class="nav-link" href="#">Registrarse</a>
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+
+            <!-- Show this only lg screens and up -->
+            <ul>
+                <button class="button-menu1 d-none d-lg-inline d-md-inline" id="boton1">
+                    <a href="#" class="text1">Trending</a>
+                </button>
+                <button  class="button-menu1 d-none d-lg d-lg-inline d-md-inline" id="boton2">
+                    <a href="#" class="text1">Categorías</a>
+                </button>
+                <img src="Fotos prototipo/logo/logo_small.png" class="logo d-none d-lg-inline d-md-inline">
+                <button  class="button-menu1 d-none d-lg-inline d-md-inline" id="boton3">
+                    <a href="#" class="text1">Iniciar sesión</a>
+                </button>
+                <button class="button-menu2 d-none d-lg-inline d-md-inline" id="boton4">
+                    <a href="#" class="text2">Registrarse</a>
+                </button>
+            </ul>
+
+        </nav>
+
+            
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+            <div class="row">
+                <div class="col-sm-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+            
+                <div class="col-sm-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                    <div class="grid-gallery">
+                        <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="Fotos prototipo/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster/assets/Raster.jpg" id="foto1">
+                        </a>
+                        <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="Fotos prototipo/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster_2/assets/Raster.jpg" id="foto2" >
+                        </a>
+                        <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="Fotos prototipo/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster_1/assets/Raster.jpg" id="foto3" >
+                        </a>
+                        <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="Fotos prototipo/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster_4/assets/Raster.jpg" id="foto4" >
+                        </a>
+                        <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="Fotos prototipo/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster_7/assets/Raster.jpg" id="foto5" >
+                        </a>
+                        <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="Fotos prototipo/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster_3/assets/Raster.jpg" id="foto6" >
+                        </a>
+                        <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="Fotos prototipo/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster_6/assets/Raster.jpg" id="foto7" >
+                        </a>
+                        <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="Fotos prototipo/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster_5/assets/Raster.jpg" id="foto8" >
+                        </a>
+
+                    </div>
+                </div>
+
+                <div class="col-sm-2 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>"
+            </div>
+
+    
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <app-root></app-root>
+    </body>
+
+
+
+
+</html>
