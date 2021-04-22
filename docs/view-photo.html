@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.00">
+    <title>Frame Wall</title>
+
+
+    <!--Bootstrap import-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/style-navbar.css">
+    <link rel="stylesheet" href="css/delete-popup.css">
+    <!--Primero tenemos que añadir Bootstrap porque si no el navbar-toggler-icon no se muestra-->
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/docs/js/utils/include.js">
+    </script>
+
+    <link rel="icon" href="/docs/images/logo/logo_small_icon_only.png">
+
+</head>
+
+<body>
+    <nav id="page-header"></nav>
+
+    <br>
+    <br>
+
+    <button id="back-btn" onclick="goBack()">
+        &lt;
+    </button>
+
+    <!-- Botones de eliminar y editar: sólo presentes en las fotos propias
+
+    <div class="container-flex space-btwn">
+
+        <button class="button-menu1 size-btn cd-popup-trigger" onclick="location.href='#0'">
+            <a href="#0" class="cd-popup-trigger">Eliminar</a>
+        </button>
+
+        <div class="cd-popup" role="alert">
+            <div class="cd-popup-container">
+                <h5>¿De verdad quieres eliminar tu imagen?</h5>
+                <ul class="cd-buttons">
+                    <li><a href="#0">Sí</a></li>
+                    <li><a href="#0">No</a></li>
+                </ul>
+                <a href="#0" class="cd-popup-close img-replace">Close</a>
+            </div> 
+        </div> 
+
+
+        <button class="button-menu1 size-btn" onclick="location.href='#'">
+            <a href="#" class="text1">Editar</a>
+        </button>
+
+
+    </div>
+
+    -->
+
+
+    <div class="container-flex jus">
+        <div class="photo-and-valoration">
+            <div>
+                <img class="preview-photo" src="images/trends/web/Raster-5.jpg" id="preview-photo">
+            </div>
+            <!--
+                La valoración sólo estará disponible para usuarios registrados (logueados)
+
+            <div class="valoracion">
+                <form action="#" >
+                    <input type="radio" name="valoracion" id="star1" value="1">1⭐
+                    <input type="radio" name="valoracion" id="star2" value="2">2⭐
+                    <input type="radio" name="valoracion" id="star3" value="3">3⭐
+                    <input type="radio" name="valoracion" id="star4" value="4">4⭐
+                    <input type="radio" name="valoracion" id="star5" value="5">5⭐
+                </form>
+            </div>
+            
+            -->
+
+        </div>
+        <div class="photo-details-container">
+            <p>Autor/a:<a href="#" class="link-profile">@Joseeg18</a> </p>
+            <p>Fecha:<span>17-02-2021</span> </p>
+            <p>Título:<span>Da luz y la oscuridad desaparecerá por si misma.</span> </p>
+            <p>Descripción:<span>Incluso en los tiempos más oscuros, siempre hay luz.</span></p>
+            <p>Puntuación:<span>4.6</span> </p>
+            <p>Visibilidad:<span>Pública</span> </p>    <!-- En fotos ajenas, siempre aparecerá como pública -->
+            <span id="category-span">Categoría:</span>
+            <div class="container-flex jus">
+                <div class="photo-category">
+                    <span>Luz</span>
+                </div>
+                <div class="photo-category">
+                    <span>Oscuridad</span>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="container-flex">
+        <div class="photo-details-container size">
+            <h3>Comentarios</h3>
+            <hr>
+            <div class="container">
+                <div class="comment-and-photo">
+                    <div class="profile">
+                        <img src="images/FotoJuan.jpg" class="profile-small-photo">
+                        <a href="#" class="link-profile">@Joseeg18</a>
+                    </div>
+
+                    <div class="comment">
+                        <span>¡Me encanta el significado que le has otorgado a la foto!</span>
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <div class="comment-and-photo">
+                    <div class="profile">
+                        <img src="images/Foto Marta.jpg" class="profile-small-photo">
+                        <a href="#" class="link-profile">@MartaJimGom2</a>
+                    </div>
+
+                    <div class="comment">
+                        <span>Cada día te superas en cada foto. ¡Enhorabuena!</span>
+                    </div>
+
+                </div>
+
+                <hr>
+
+
+
+            </div> 
+            <!-- Este form no estará disponible en la vista de invitado-->
+            <form action="#" class="post-comment">
+                <input type="text" id="post-comment-text" placeholder="     Escribe tu comentario">
+                <input type="submit" value="Publicar" id="post-comment-btn">
+            </form>
+        </div>
+
+    </div>
+
+
+    <div id="github-footer"></div>
+
+
+
+    <script src="/docs/js/utils.js"></script>
+
+
+
+    <script>
+        include("header-user-no-followed-btn.html", "#page-header");
+        include("footer-gh.html", "#github-footer");
+    </script>
+</body>
+
+
+
+
+</html>

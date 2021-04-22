@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta chadet="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.00">
+    <title>Categorías - Frame Wall</title>
+
+
+    <!--Bootstrap import-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/style-navbar.css">
+    <!--Primero tenemos que añadir Bootstrap porque si no el navbar-toggler-icon no se muestra-->
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/docs/js/utils/include.js">
+    </script>
+
+    <link rel="icon" href="/docs/images/logo/logo_small_icon_only.png">
+
+</head>
+
+<body>
+    <nav id="page-header"></nav>
+
+    <br>
+
+
+    <button id="back-btn" onclick="goBack()">
+        &lt;
+    </button>
+
+
+
+    <div class="row">
+        <div class="col-1 col-sm-2 col-md-4 col-lg-3 col-xl-3"></div>
+        <div class="col-10 col-sm-8 col-md-6 col-lg-6 col-xl-6">
+            <div id="contenedor">
+                <span id="question"><strong>¿No encuentras una categoría?</strong></span>
+                <input type="search " id="input-search" placeholder="  Búscala aquí...">
+            </div>
+        </div>
+        <div class="col-1 col-sm-2 col-md-4 col-lg-3 col-xl-3 "></div>
+
+        <div class="row">
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn" onclick="location.href='paisajes.html'">
+                        <a href="paisajes.html" class="cat-btn-lnk">Paisajes</a>
+                    </button>
+                </ul>
+            </div>
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Ciencia</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Astronomía</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Arquitectura</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Espejos</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Periodística</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Retratos</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Coches</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Cielos</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Estilo</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Moda</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Perros</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Atardeceres</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Animales</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Arte</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Monumentos</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Lago</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Estatuas</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Fútbol</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Océano</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Escolar</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Nocturna</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Gatos</a>
+                    </button>
+                </ul>
+            </div>
+
+            <div class="col-5 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                <ul class="lst">
+                    <button class="button-menu2 cat-btn">
+                        <a href="#" class="cat-btn-lnk">Superhéroes</a>
+                    </button>
+                </ul>
+            </div>
+
+
+
+            <div class="col-1 col-sm-2 col-md-3 col-lg-3 col-xl-3"></div>
+        </div>
+    </div>
+
+    <div id="github-footer"></div>
+
+
+    <script src="/docs/js/utils.js"></script>
+
+    <script>
+        include("header-user-no-followed-btn.html", "#page-header");
+        include("footer-gh.html", "#github-footer");
+    </script>
+</body>
+
+
+
+
+</html>

@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eee;
+    font-family: 'Lato', sans-serif;
+    margin-left: 0;
+    overflow-x: hidden;
+}
+
+/* Barras de scroll */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+   }
+   ::-webkit-scrollbar-thumb {
+    background: #969696;
+    border-radius: 10px;
+   }
+   ::-webkit-scrollbar-thumb:hover{
+    background: #757575;
+   }
+   ::-webkit-scrollbar-track{
+    background: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
+   }
+
+
+.row {
+    margin: 1em auto;
+}
+
+.grid-gallery__image {
+    filter: grayscale(100%);
+    transition: filter 0.6s;
+}
+
+.grid-gallery__image:hover {
+    filter: grayscale(0);
+}
+
+.grid-gallery__item {
+    transition: transform ease-in-out 0.3s;
+}
+
+.grid-gallery__item:hover {
+    transform: scale(1.02);
+}
+
+.grid-gallery {
+    display: grid;
+    grid-auto-rows: 120px;
+    grid-gap: 0.8rem;
+    grid-auto-flow: row dense;
+}
+
+.grid-gallery__item:nth-child(1) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.grid-gallery__item:nth-child(2) {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.grid-gallery__item:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.grid-gallery__item:nth-child(4) {
+    grid-column: span 1;
+    grid-row: span 4;
+}
+
+.grid-gallery__item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 4;
+}
+
+.grid-gallery__item:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.grid-gallery__item:nth-child(7) {
+    grid-column: span 2;
+    grid-row: span 3;
+}
+
+.grid-gallery__item:nth-child(8) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.grid-gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 430px) {
+    .grid-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .grid-gallery__item {
+        grid-column: span 1 !important;
+    }
+
+    .center {
+        width: 80% !important;
+    }
+
+    .cat {
+        width: 55%;
+    }
+
+    .container-flex .preview-photo {
+        height: 230px;
+        width: 230px;
+    }
+
+    .photo-details-container {
+        height: 100%;
+        width: 250px;
+    }
+
+    .photo-details-container h3 {
+        font-size: x-large;
+    }
+
+
+    .profile-small-photo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile a {
+        font-size: medium !important;
+    }
+
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile-line {
+        width: 70%;
+    }
+   
+
+}
+
+@media (min-width: 430px) {
+    .center {
+        width: 320px;
+    }
+
+    .cat {
+        width: 200px;
+    }
+
+    .container-flex .preview-photo {
+        height: 300px;
+        width: 300px;
+    }
+
+    .photo-details-container {
+        height: 100%;
+        width: 350px;
+    }
+
+    .profile-small-photo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .size {
+        width: 100%;
+    }
+
+    .profile-line {
+        width: 300px;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+
+}
+
+
+@media (min-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .container-flex .preview-photo {
+        height: 400px;
+        width: 400px;
+    }
+
+    .photo-details-container {
+        width: 400px;
+    }
+
+    .size {
+        height: 400px;
+        width: 500px;
+    }
+
+}
+
+@media (max-width: 857px) {
+    .datos {
+        text-align: center;
+    }
+}
+
+@media all and (min-width: 992px) {
+    .grid-gallery {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+}
+
+@media (min-width: 1240px) {
+    
+    .size-gallery-profile {
+        width: 1300px;
+    }
+
+}
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination li a {
+    border-radius: 50% !important;
+    margin: 0 5px;
+    /*color: #47525E;*/
+}
+
+.page-link {
+    color: #47525E !important;
+    background-color: #ffffff;
+}
+
+.page-item.active .page-link {
+    color: #ffffff !important;
+    background-color: #47525E;
+    border-color: #47525E;
+}
+
+#user img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 3px solid #000000;
+    object-fit: cover;
+}
+
+#back-btn {
+    margin-left: 3%;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #47525E;
+    border-radius: 10px;
+    width: auto;
+    min-width: 4%;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#question {
+    padding-right: 3%;
+}
+
+#input-search {
+    padding-left: 3%;
+    border-radius: 100px;
+}
+
+.cat-btn {
+    min-width: 150px;
+    border-radius: 45px !important;
+    padding: 0 5%;
+}
+
+.cat-btn-lnk, 
+.cat-btn-lnk:hover {
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    color: #47525E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.lst {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    background-color: #47525E;
+    border: 2px solid #47525E;
+    border-radius: 12px;
+    width: 13%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.container-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 70px;
+}
+
+.container-flex .img-item {
+    width: 200px;
+    height: 200px;
+    background-color: #6767722a;
+    margin: 10px 10px;
+}
+
+.img-item {
+   object-fit: contain;
+}
+
+.center {
+    display: flex;
+    margin: auto;
+    background-color: #47525E;
+    border: 2px solid #47525E;
+    border-radius: 12px;
+    height: 30%;
+    
+}
+
+.center span {
+    color: #ffffff;
+    margin: auto;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.line {
+    width: 65%;
+    border: solid #47525e2a;
+    border-radius: 10px;
+    background-color: #47525e2a;
+}
+
+
+
+
+
+#github-link {
+    width: 125px;
+    height: 51.25px;
+}
+
+.cat {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px auto;
+    border: 2px solid #47525E;
+    border-radius: 15px;
+}
+
+
+
+.title-2 {
+    padding: 30px 0 10px 0;
+}
+
+.num {
+    font-size:x-small
+}
+
+
+.container-flex .preview-photo {
+
+    background-color: #6767722a;
+    margin: 10px 10px;
+}
+
+.preview-photo {
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.jus {
+    justify-content: space-evenly;
+    
+}
+
+.photo-details-container {
+    margin: 10px 10px;
+    padding: 30px 20px;
+    background-color: #6767722a;
+    border: 2px solid #47525E;
+    border-radius: 20px;
+}
+
+.photo-details-container p, #category-span {
+    font-weight: bold;
+}
+
+.link-profile {
+    margin-left: 8px;
+    color: #3f0eb1;
+    text-decoration: none;
+}
+
+.link-profile:hover {
+    text-decoration: underline;
+    color: #3f0eb1;
+
+}
+
+.photo-details-container p span {
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+.valoracion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.valoracion input {
+    margin: 5px  15px;
+}
+
+.photo-and-valoration  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.photo-details-container h3 {
+    font-weight: bold;
+    text-align: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.profile a {
+    font-size: large;
+    color: #000000;
+    font-weight: bold;
+}
+
+.profile-small-photo {
+    object-fit: cover;
+    border: 3px solid #000000;
+    border-radius: 100px;
+}
+
+
+.size {
+    max-height: 100% !important ;
+}
+
+.container {
+    height: 75%;
+    overflow-y: auto;
+}
+
+.size-btn {
+    width: 100px !important;
+    margin: 10px 0;
+}
+
+.space-btwn {
+    justify-content: space-around;
+}
+
+.post-comment {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#post-comment-text {
+    width: 80%;
+    border-radius: 80px;
+    border: 2px solid #47525E;
+}
+
+#post-comment-btn {
+    width: 100px;
+    background-color: #47525E;
+    color: #FFFFFF;
+    border-radius: 80px;
+    border: 2px solid #47525E
+}
+
+
+.photo-category {
+    border-radius: 10px;
+    border: 2px solid #47525E;
+    padding:  0 10px;
+    margin: 5px;
+
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.span-container {
+    background-color: rgba(150, 159, 170, 0.59);
+    border-radius: 19px;
+    margin: 10px;
+    min-width: 150px;
+    text-align: center;
+    
+}
+
+.detail-btn {
+    padding: 10px;   
+    text-align: center;
+}
+
+.photo-ft-btn {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px 30px;
+}
+
+.profile-line {
+    border: solid #47525e2a;
+    border-radius: 10px;
+    background-color: #47525e2a;
+    
+}
+
+.sign-out-btn {
+    width: 150px;
+    border-radius: 20px;
+    border: 2px solid #47525E;
+    margin: 10px;
+}
+
+.sign-out-btn a {
+    text-decoration: none;
+    color: #000000;
+
+}
+
+.sign-out-btn:hover {
+    background-color: #47525E;
+    color: #FFFFFF;
+    
+    
+}
+
+
+.profile-photo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrap-reverse {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.profile-photo {
+    object-fit: cover;
+    border: 4px solid #000000;
+    margin: 10px;
+    border-radius: 100%;
+}
+
+/* Al poner la página pequeña, el contenedor se queda 
+   desplazado a la izquierda, afectando a la visualización
+   completa de la página web. Por eso hacemos este override
+   de propiedad, para que quite el padding de dicho contenedor
+   y por ende el resto de la página se visualice bien*/
+.no-padd {  
+    padding: 0 !important;
+}
+
+
+/*##################################################*/
+/* Botón de seguir/dejar de seguir en perfil ajeno. */
+/*
+#follow-btn {
+    color: #47525E;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid #47525E;
+    width: 150px;
+} 
+*/
+
+.follow-btn {
+    background: #47525E;
+    border: 3px solid #47525E;
+    padding: 5px 10px;
+    color: white;
+    width: 150px;
+    border-radius: 20px;
+    transition: all .3s ease-in;
+}
+
+
+.follow-btn:active,
+.follow-btn:visited {
+    outline: none;
+}
+
+.unfollow {
+    background: #eee;
+    color: #47525E;
+}
