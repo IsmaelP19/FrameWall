@@ -24,20 +24,25 @@ FrameWall is a simple and fast photography social network. It is built with Sile
 `pip install Silence==1.2.4`
 
 7. At this point, we have all the prerequisites installed. Now we will clone the project. To do so, we open a new command prompt and execute the following commands:
-    >`git clone https://github.com/IsmaelP19/Proyecto-FrameWall`
-    >
-    >`cd Proyecto-FrameWall`
-    >
-    >`silence createdb`
-    >
-    >`silence run`
+    
+    ```
+    git clone https://github.com/IsmaelP19/Proyecto-FrameWall
+  
+    cd Proyecto-FrameWall
+  
+    silence createdb
+  
+    silence run
+    ```
   
    If any of these commands give you an error, it is probably because you haven't create the user or database correctly, or you haven't granted the correct privileges to the user.
 
    If the last command is the only one that shows you the error `cannot import name 'escape' from 'jinja2'`, you will have to uninstall flask and install it again. To do so, execute the following commands:
-    >`pip uninstall flask`
-    >
-    >`pip install flask==2.1.0`
+    ```
+    pip uninstall flask
+    
+    pip install flask==2.1.0
+    ```
 
 8. If you have reached this point, you should be able to run correctly the project. To do so, run the following command: `silence run`.
 
