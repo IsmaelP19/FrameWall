@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
 body {
     margin: 0;
     padding: 0;
@@ -9,24 +8,28 @@ body {
     overflow-x: hidden;
 }
 
+
 /* Barras de scroll */
+
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-   }
-   ::-webkit-scrollbar-thumb {
+}
+
+ ::-webkit-scrollbar-thumb {
     background: #969696;
     border-radius: 10px;
-   }
-   ::-webkit-scrollbar-thumb:hover{
+}
+
+ ::-webkit-scrollbar-thumb:hover {
     background: #757575;
-   }
-   ::-webkit-scrollbar-track{
+}
+
+ ::-webkit-scrollbar-track {
     background: #f0f0f0;
     border-radius: 15px;
     box-shadow: inset 7px 10px 12px #f0f0f0;
-   }
-
+}
 
 .row {
     margin: 1em auto;
@@ -49,11 +52,13 @@ body {
     transform: scale(1.02);
 }
 
+
+/* Con el grid-auto-flow lo que hacemos es rellenar los huecos vacíos para que quede uniforme */
+
 .grid-gallery {
     display: grid;
     grid-auto-rows: 120px;
     grid-gap: 0.8rem;
-    grid-auto-flow: row dense;
 }
 
 .grid-gallery__item:nth-child(1) {
@@ -103,118 +108,108 @@ body {
 }
 
 @media (max-width: 430px) {
+    body {
+        font-size: large;
+    }
+    .center {
+        width: 80% !important;
+    }
+    .cat {
+        width: 55%;
+    }
+    .container-flex .preview-photo {
+        height: 230px;
+        width: 230px;
+    }
+    .photo-details-container {
+        height: 100%;
+        width: 250px;
+    }
+    .size {
+        height: 400px;
+        width: 250px;
+    }
+    .photo-details-container h3 {
+        font-size: x-large;
+    }
+    .profile-small-photo {
+        width: 40px;
+        height: 40px;
+    }
+    .profile a {
+        font-size: medium !important;
+    }
+    .profile-photo {
+        width: 140px;
+        height: 140px;
+    }
+    .profile-line {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
     .grid-gallery {
         grid-template-columns: repeat(1, 1fr);
     }
     .grid-gallery__item {
         grid-column: span 1 !important;
     }
-
-    .center {
-        width: 80% !important;
-    }
-
-    .cat {
-        width: 55%;
-    }
-
-    .container-flex .preview-photo {
-        height: 230px;
-        width: 230px;
-    }
-
-    .photo-details-container {
-        height: 100%;
-        width: 250px;
-    }
-
-    .photo-details-container h3 {
-        font-size: x-large;
-    }
-
-
-    .profile-small-photo {
-        width: 40px;
-        height: 40px;
-    }
-
-    .profile a {
-        font-size: medium !important;
-    }
-
-    .profile-photo {
-        width: 140px;
-        height: 140px;
-    }
-
-    .profile-line {
-        width: 70%;
-    }
-   
-
 }
 
 @media (min-width: 430px) {
+    body {
+        font-size: large;
+    }
     .center {
         width: 320px;
     }
-
     .cat {
         width: 200px;
     }
-
     .container-flex .preview-photo {
         height: 300px;
         width: 300px;
     }
-
     .photo-details-container {
         height: 100%;
         width: 350px;
     }
-
     .profile-small-photo {
         width: 60px;
         height: 60px;
     }
-
     .size {
-        width: 100%;
+        height: 400px;
+        width: 350px;
     }
-
     .profile-line {
         width: 300px;
     }
-
     .profile-photo {
         width: 200px;
         height: 200px;
     }
-
-
 }
 
-
 @media (min-width: 768px) {
+    body {
+        font-size: medium;
+    }
     .grid-gallery {
         grid-template-columns: repeat(3, 1fr);
     }
-
-
     .container-flex .preview-photo {
         height: 400px;
         width: 400px;
     }
-
     .photo-details-container {
         width: 400px;
     }
-
     .size {
         height: 400px;
         width: 500px;
     }
-
 }
 
 @media (max-width: 857px) {
@@ -227,17 +222,13 @@ body {
     .grid-gallery {
         grid-template-columns: repeat(5, 1fr);
     }
-
 }
 
 @media (min-width: 1240px) {
-    
     .size-gallery-profile {
         width: 1300px;
     }
-
 }
-
 
 .pagination {
     display: flex;
@@ -262,10 +253,10 @@ body {
     border-color: #47525E;
 }
 
-#user img {
+.user img {
     width: 100px;
     height: 100px;
-    border-radius: 100%;
+    border-radius: 100px;
     border: 3px solid #000000;
     object-fit: cover;
 }
@@ -288,6 +279,7 @@ body {
 
 #question {
     padding-right: 3%;
+    text-align: center;
 }
 
 #input-search {
@@ -298,10 +290,10 @@ body {
 .cat-btn {
     min-width: 150px;
     border-radius: 45px !important;
-    padding: 0 5%;
+    padding: 5px;
 }
 
-.cat-btn-lnk, 
+.cat-btn-lnk,
 .cat-btn-lnk:hover {
     display: inline-block;
     outline: none;
@@ -311,7 +303,6 @@ body {
     font-size: 100%;
     width: 100%;
     text-align: center;
-    
 }
 
 .lst {
@@ -324,7 +315,7 @@ body {
     background-color: #47525E;
     border: 2px solid #47525E;
     border-radius: 12px;
-    width: 13%;
+    width: 200px;
     text-align: center;
     color: #FFFFFF;
 }
@@ -335,7 +326,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 10px 70px;
+    padding: 10px 20px;
 }
 
 .container-flex .img-item {
@@ -346,7 +337,7 @@ body {
 }
 
 .img-item {
-   object-fit: contain;
+    object-fit: contain;
 }
 
 .center {
@@ -356,7 +347,6 @@ body {
     border: 2px solid #47525E;
     border-radius: 12px;
     height: 30%;
-    
 }
 
 .center span {
@@ -373,10 +363,6 @@ body {
     background-color: #47525e2a;
 }
 
-
-
-
-
 #github-link {
     width: 125px;
     height: 51.25px;
@@ -391,31 +377,23 @@ body {
     border-radius: 15px;
 }
 
-
-
 .title-2 {
     padding: 30px 0 10px 0;
 }
 
 .num {
-    font-size:x-small
-}
-
-
-.container-flex .preview-photo {
-
-    background-color: #6767722a;
-    margin: 10px 10px;
+    font-size: x-small
 }
 
 .preview-photo {
     object-fit: contain;
     border-radius: 20px;
+    background-color: #6767722a;
+    margin: 10px 10px;
 }
 
 .jus {
     justify-content: space-evenly;
-    
 }
 
 .photo-details-container {
@@ -426,7 +404,8 @@ body {
     border-radius: 20px;
 }
 
-.photo-details-container p, #category-span {
+.photo-details-container p,
+#category-span {
     font-weight: bold;
 }
 
@@ -439,7 +418,6 @@ body {
 .link-profile:hover {
     text-decoration: underline;
     color: #3f0eb1;
-
 }
 
 .photo-details-container p span {
@@ -456,14 +434,7 @@ body {
 }
 
 .valoracion input {
-    margin: 5px  15px;
-}
-
-.photo-and-valoration  div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+    margin: 5px 15px;
 }
 
 .photo-details-container h3 {
@@ -489,9 +460,8 @@ body {
     border-radius: 100px;
 }
 
-
 .size {
-    max-height: 100% !important ;
+    max-height: 100% !important;
 }
 
 .container {
@@ -504,18 +474,24 @@ body {
     margin: 10px 0;
 }
 
+
+/* Botón de confirmar cambios en editar foto */
+
+.size-btn-2 {
+    width: 170px !important;
+}
+
 .space-btwn {
     justify-content: space-around;
 }
 
 .post-comment {
+    margin: 8px 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-
 
 #post-comment-text {
     width: 80%;
@@ -531,13 +507,19 @@ body {
     border: 2px solid #47525E
 }
 
+#post-evaluation-btn {
+    width: 100px;
+    background-color: #47525E;
+    color: #FFFFFF;
+    border-radius: 80px;
+    border: 2px solid #47525E
+}
 
 .photo-category {
     border-radius: 10px;
     border: 2px solid #47525E;
-    padding:  0 10px;
+    padding: 0 10px;
     margin: 5px;
-
 }
 
 .btn-container {
@@ -546,7 +528,6 @@ body {
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    
 }
 
 .span-container {
@@ -555,11 +536,10 @@ body {
     margin: 10px;
     min-width: 150px;
     text-align: center;
-    
 }
 
 .detail-btn {
-    padding: 10px;   
+    padding: 10px;
     text-align: center;
 }
 
@@ -573,7 +553,6 @@ body {
     border: solid #47525e2a;
     border-radius: 10px;
     background-color: #47525e2a;
-    
 }
 
 .sign-out-btn {
@@ -586,16 +565,12 @@ body {
 .sign-out-btn a {
     text-decoration: none;
     color: #000000;
-
 }
 
 .sign-out-btn:hover {
     background-color: #47525E;
     color: #FFFFFF;
-    
-    
 }
-
 
 .profile-photo-container {
     display: flex;
@@ -615,27 +590,22 @@ body {
     border-radius: 100%;
 }
 
+
 /* Al poner la página pequeña, el contenedor se queda 
    desplazado a la izquierda, afectando a la visualización
    completa de la página web. Por eso hacemos este override
    de propiedad, para que quite el padding de dicho contenedor
    y por ende el resto de la página se visualice bien*/
-.no-padd {  
+
+.no-padd {
     padding: 0 !important;
 }
 
 
 /*##################################################*/
+
+
 /* Botón de seguir/dejar de seguir en perfil ajeno. */
-/*
-#follow-btn {
-    color: #47525E;
-    font-weight: bold;
-    border-radius: 20px;
-    border: 2px solid #47525E;
-    width: 150px;
-} 
-*/
 
 .follow-btn {
     background: #47525E;
@@ -647,13 +617,147 @@ body {
     transition: all .3s ease-in;
 }
 
-
 .follow-btn:active,
-.follow-btn:visited {
+.follow-btn:visited,
+.follow-btn:focus {
     outline: none;
 }
 
 .unfollow {
     background: #eee;
     color: #47525E;
+}
+
+
+/* Inputs para subir imagen */
+
+.margin-bottom {
+    margin-bottom: 15px;
+}
+
+.margin-top {
+    margin-top: 15px;
+}
+
+.url-input {
+    width: 90%;
+    border: 1px solid #47525E;
+    border-radius: 10px;
+    background-color: #eee;
+    padding-left: 10px;
+}
+
+.title-input {
+    width: 90%;
+    border: 1px solid #47525E;
+    border-radius: 10px;
+    background-color: #eee;
+    padding-left: 10px;
+}
+
+.less-margin-bottom {
+    margin-bottom: 5px;
+}
+
+.container-input {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.margin-btwn {
+    margin: 0 5px 0 15px;
+}
+
+.upload-btn {
+    background-color: #47525E;
+    color: #FFFFFF;
+    min-width: 110px;
+}
+
+.cancel-btn {
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel-btn:hover {
+    text-decoration: none;
+    color: #000000;
+}
+
+.update-btn {
+    background-color: #47525e2a;
+    border: 2px solid #47525E;
+    border-radius: 10px;
+    width: 170px;
+}
+
+
+/* Caja de categorías (multiple select picker from Bootstrap) */
+
+.bootstrap-select {
+    width: 100% !important;
+    background-color: #eee;
+    border-radius: 5px;
+    border: 1px solid #47525E;
+}
+
+
+/* Las clases siguientes son para la altura del dropdown select
+una vez abierto */
+
+div.dropdown-menu.open {
+    max-height: 130px !important;
+    overflow: hidden;
+}
+
+ul.dropdown-menu.inner {
+    max-height: 130px !important;
+    overflow-y: auto;
+}
+
+
+/*-------*/
+
+.link,
+.link:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.dropdown-menu,
+.show {
+    min-width: 100% !important;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #47525E;
+}
+
+.bootstrap-select {
+    width: 100% !important;
+}
+
+
+/*-------*/
+
+.wrap {
+    flex-direction: column !important;
+}
+
+.select-valoration {
+    border-radius: 10px;
+    border: 2px solid #47525E;
+    background-color: #6767722a;
+    width: 60px;
+}
+
+
+/* ---------------- */
+
+#lg-ul li {
+    display: inline;
 }

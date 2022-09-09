@@ -1,4 +1,3 @@
-
 .button-menu2 {
     background-color: rgba(255, 255, 255, 0);
     border: 2px solid #47525E;
@@ -18,7 +17,6 @@
     text-align: center;
 }
 
-
 .logo {
     padding-top: 2%;
     margin-right: 5%;
@@ -32,13 +30,11 @@
     padding: 5px;
     list-style-type: none;
     text-align: center;
-
 }
 
 #navbar ul button {
     display: inline;
 }
-
 
 #boton1 {
     margin-left: 10%;
@@ -62,12 +58,10 @@
 
 .navbar-toggler {
     color: rgba(0, 0, 0, .5);
-    border: 2px solid rgba(0,0,0,.5);   
+    border: 2px solid rgba(0, 0, 0, .5);
     display: inline-block;
     margin: auto;
-
 }
-
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -84,101 +78,81 @@
     color: hsl(0, 0%, 100%)
 }
 
-
-
-
-#myForm {
+.myForm {
     display: grid;
     place-items: center;
-    
 }
- 
+
+.form-register {
+    display: grid;
+    place-items: center;
+}
 
 .form-login {
-      background-color: #dddcdc;
-      padding: 30px;
-      border: solid;
-      border-radius: 45px;
-      border-color:#000000;
-  }
-  
+    background-color: #dddcdc;
+    padding: 30px;
+    border: solid;
+    border-radius: 45px;
+    border-color: #000000;
+}
 
-  h2 { 
-   font-weight: bold;;
-   padding-bottom:10px;
-   text-align: center;
-  }
-  
-  .form-control {
-      border-radius: 10px;
-  }
-  
-  .wrapper {
+h2 {
+    font-weight: bold;
+    ;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.wrapper {
     display: grid;
     place-items: center;
 }
 
+.login-btn {
+    width: 45%;
+    background-color: #47525E;
+    border: 2px solid #47525E;
+    border-radius: 15px;
+}
 
+.upload-btn {
+    width: 80%;
+}
 
-  .login-btn {
-      width: 45%;
-      background-color: #47525E;
-      border: 2px solid #47525E;
-      border-radius: 15px;
-  }
-
-  .upload-btn {
-      width: 45%;
-  }
-
-
+.urlText {
+    color: #47525E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    text-align: center;
+}
 
 
 /* body del formulario */
+
 .form-register__body {
     display: flex;
     place-items: center;
     padding: 0px 5%;
-    
 }
 
+
 /* step */
+
 .step {
     background-color: #dddcdc;
     padding: 30px;
     border: solid;
     border-radius: 45px;
     border-color: #000000;
-    min-width: 100%;
-    opacity: 0;
-    transition: all .2s linear;
 }
 
-.step.active {
-    opacity: 1;
-}
-
-.step.to-left {
-    margin-left: -100%;
-}
-
-.step.inactive {
-    animation-name: scale;
-    animation-duration: .2s;
-    animation-direction: alternate;
-    animation-iteration-count: 2;
-}
-
-@keyframes scale {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
-}
 
 /* Título del step */
+
 h2 {
     font-weight: bold;
     padding-bottom: 10px;
@@ -188,53 +162,60 @@ h2 {
 
 
 /* body de step */
+
 .step__body {
     padding: 20px 15px 0;
 }
 
+
 /* step inputs */
+
 .step__input {
     display: block;
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 3px;
+    border-radius: 10px;
 }
 
+
 /* Footer de cada parte del formulario: donde se encuentran los botones para pasar, regresar y registrarse */
+
 .step__footer {
     padding: 20px 0px;
     text-align: center;
 }
 
+
 /* step botones */
 
-.step__button {
+.submit-button {
     display: inline-block;
     padding: 10px;
-    margin: 0 20px ;
+    margin: 0 20px;
     color: white;
-    width: 100px;
-    
+    width: 150px;
     background-color: #47525E;
     border: 2px solid #47525E;
     border-radius: 15px;
     cursor: pointer;
 }
 
-#step-1 {
-    margin-top: -420px;
-}
-
-
-
 @media (max-width: 430px) {
     .step {
-        max-width: 150px;
+        max-width: 90vw;
     }
+}
 
-    .step__button {
-        margin: 0px 5px;
+@media (min-width: 430px) {
+    .step {
+        width: 90vw;
     }
-    
+}
+
+@media (min-width: 650px) {
+    .step {
+        width: 590px;
+    }
 }

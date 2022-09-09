@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.00">
+    <title>Frame Wall</title>
+
+
+    <!--Bootstrap import-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/style-navbar-login-signup.css">
+    <link rel="stylesheet" href="css/style-navbar.css">
+    <link rel="stylesheet" href="css/delete-popup.css">
+    <!--Primero tenemos que añadir Bootstrap porque si no el navbar-toggler-icon no se muestra-->
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/docs/js/utils/include.js"></script>
+
+    <script src="js/edit-photo.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+
+
+    <link rel="icon" href="/docs/images/logo/logo_small_icon_only.png">
+
+</head>
+
+<body>
+    <nav id="page-header"></nav>
+
+    <br>
+    <br>
+
+    <div id="errors" class="container-flex"></div>
+
+
+    <form id="form-photo-upload">
+
+        <div class="container-flex jus">
+            <div class="photo-and-valoration">
+
+                <div id="uploaded-image">
+                    <!-- Por defecto debe aparecer la imagen que estamos editando-->
+                    <img src="images/Background-color.jpg" class="preview-photo" id="uploaded-image">
+                </div>
+
+            </div>
+
+            <div class="photo-details-container" id="photo-details-container">
+                <p class="less-margin-bottom">URL:</p>
+
+                <input type="url" name="link" placeholder="Ingrese la URL de la imagen" id="image-input" class="url-input margin-bottom" required>
+
+                <p class="less-margin-bottom">Título: </p>
+                <input type="text" name="title" id="title" placeholder="Ingrese el título" class="title-input margin-bottom" required>
+
+                <p class="less-margin-bottom">Descripción: </p>
+                <input type="text" name="description" id="description" placeholder="Ingrese la descripción" class="title-input margin-bottom" required>
+
+
+                <p class="less-margin-bottom">Visibilidad:</p>
+
+                <select name="visibility" id="visibility" class="selectpicker" title="Elija la visibilidad" required>
+                    <option value="Pública">Pública</option>
+                    <option value="Privada">Privada</option>
+                </select>
+
+
+
+                <hr>
+
+                <span id="cat-warning"> Si desea añadir una categoría, suba primero la foto y luego edítela.</span>
+
+                <div id="categories-container">
+                    <p class="less-margin-bottom">Categoría/s:</p>
+
+                    <div id="show-categories-attached" class="container-flex jus">
+
+                    </div>
+
+                    <select class="selectpicker margin-bottom" id="categories-selectpicker" size="5" name="categories" title="Escoja las categorías que desee asociar" multiple data-live-search="true"></select>
+
+                    <div class="container-flex no-padd">
+                        <button type="button" class="update-btn margin-bottom" id="attach-cat-btn">Asociar categorías</button>
+                    </div>
+
+                    <select class="selectpicker margin-bottom jus" id="delete-attached-categories" size="5" name="categories" title="Escoja las categorías que desee eliminar" multiple data-live-search="true"></select>
+
+                    <div class="container-flex no-padd">
+                        <button type="button" class="update-btn margin-bottom" id="delete-cat-btn">Eliminar categorías asociadas</button>
+                    </div>
+
+
+                    <div class="container-flex no-padd">
+                        <input type="text" id="add-cat-input" placeholder="Escriba la categoría a añadir" class="title-input margin-bottom">
+                    </div>
+
+                    <div class="container-flex no-padd">
+                        <button type="button" class="update-btn" id="update-cat-btn">Añadir al menú</button>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+
+        </div>
+
+
+
+
+        <div class="container-flex space-btwn">
+
+            <div class="button-menu2 size-btn">
+                <a href="index.html" class="cancel-btn">Cancelar</a>
+            </div>
+
+
+            <input type="submit" id="submit-btn" value="Subir imagen" class="button-menu1 size-btn-2 upload-btn">
+
+
+
+        </div>
+
+
+
+
+
+
+    </form>
+
+
+    <div id="github-footer"></div>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+    <script>
+        include("footer-gh.html", "#github-footer");
+    </script>
+</body>
+
+
+
+
+</html>

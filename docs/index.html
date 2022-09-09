@@ -18,8 +18,11 @@
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/docs/js/utils/include.js">
-    </script>
+    <script src="/docs/js/utils/include.js"></script>
+
+    <script src="js/index.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+
 
     <link rel="icon" href="/docs/images/logo/logo_small_icon_only.png">
 
@@ -28,8 +31,16 @@
 <body>
     <nav id="page-header"></nav>
 
+    <!--<nav id="navbar"></nav>-->
+
+
+
+
+
     <br>
     <br>
+
+    <div id="errors" class="container-flex"></div>
 
     <!--Fotos de la galería-->
     <div class="row">
@@ -37,6 +48,7 @@
 
         <div class="col-10 col-sm-8 col-md-8 col-lg-8 col-xl-8">
             <div class="grid-gallery">
+                <!--
                 <a class="grid-gallery__item" href="#">
                     <img class="grid-gallery__image" src="images/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster/assets/Raster_web.jpg" id="foto1">
                 </a>
@@ -61,6 +73,7 @@
                 <a class="grid-gallery__item" href="#">
                     <img class="grid-gallery__image" src="images/index1/RF-C01 (invitado)-2021-03-11+00_03_17.037561/Raster_5/assets/Raster_web.jpg" id="foto8">
                 </a>
+                -->
 
             </div>
         </div>
@@ -70,7 +83,7 @@
 
 
 
-    <!--Menú de paginación inferior-->
+    <!--Menú de paginación inferior
     <nav>
         <ul class="pagination">
             <li class="page-item disabled">
@@ -92,6 +105,7 @@
             </li>
         </ul>
     </nav>
+    -->
 
 
     <div id="github-footer"></div>
@@ -99,9 +113,11 @@
 
 
     <script>
-            include("header.html", "#page-header");
-            include("footer-gh.html", "#github-footer")
+        include("footer-gh.html", "#github-footer")
     </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 
 

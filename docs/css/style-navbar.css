@@ -1,14 +1,9 @@
-
 .button-menu1 {
     background-color: #47525E;
     border: 2px solid #47525E;
     border-radius: 12px;
     width: 13%;
-
 }
-
-
-
 
 .text1,
 .text1:hover {
@@ -19,11 +14,7 @@
     font-family: Arial, Helvetica, sans-serif;
     max-width: 50%;
     text-align: center;
-
 }
-
-
-
 
 .button-menu2 {
     background-color: rgba(255, 255, 255, 0);
@@ -37,13 +28,12 @@
 .text2:hover {
     outline: none;
     text-decoration: none;
-    color: #47525E;
+    color: #000000;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
     width: 50%;
     text-align: center;
 }
-
 
 .logo {
     padding-top: 2%;
@@ -53,11 +43,23 @@
     width: 20%;
 }
 
-.logo-n {   /* Esta clase es para poner el logo centrado, sin botones a la izquierda */
+.logo-n {
+    /* Esta clase es para poner el logo centrado, sin botones a la izquierda */
     padding-top: 2%;
     height: 20%;
     width: 20%;
-    margin: 0 5%  0 36.4%;
+    margin: 0 5% 0 36.4%;
+}
+
+
+/* Esta clase es para poner el logo centrado, sin botones a la izquierda y
+    solamente el botón de "Mi cuenta" a la derecha */
+
+.logo-nn {
+    padding-top: 2%;
+    height: 20%;
+    width: 20%;
+    margin: 0 23.2% 0 36.4%;
 }
 
 #logo:hover {
@@ -66,10 +68,10 @@
 }
 
 #logo-pequenio {
-    height: 120px; 
-    width: 120px; 
-    border-radius:100%; 
-    margin: auto; 
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    margin: auto;
 }
 
 #navbar ul {
@@ -77,13 +79,11 @@
     padding: 5px;
     list-style-type: none;
     text-align: center;
-
 }
 
 #navbar ul button {
     display: inline;
 }
-
 
 #boton1 {
     margin-left: 10%;
@@ -115,12 +115,10 @@
 
 .navbar-toggler {
     color: rgba(0, 0, 0, .5);
-    border: 2px solid rgba(0,0,0,.5);   
+    border: 2px solid rgba(0, 0, 0, .5);
     display: inline-block;
     margin: auto;
-
 }
-
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
@@ -132,6 +130,7 @@
 
 .nav-link,
 .nav-link:hover {
+    text-align: center;
     text-decoration: none;
     outline: none;
     color: hsl(0, 0%, 100%)

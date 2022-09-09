@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 
+
 /* -------------------------------- 
 
 Modules - reusable parts of our design
@@ -19,6 +20,7 @@ Modules - reusable parts of our design
     white-space: nowrap;
 }
 
+
 /* -------------------------------- 
 
 Main components 
@@ -33,6 +35,7 @@ Main components
     color: #FFF;
     text-decoration: none;
 }
+
 
 /* -------------------------------- 
 
@@ -116,7 +119,7 @@ xpopup
 
 .cd-popup-container .cd-buttons li:first-child a {
     background: #fc7169;
-    border-radius: 0 0 0 .25em;
+    border-radius: 0 0 0 20px;
 }
 
 .no-touch .cd-popup-container .cd-buttons li:first-child a:hover {
@@ -140,7 +143,8 @@ xpopup
     height: 30px;
 }
 
-.cd-popup-container .cd-popup-close::before, .cd-popup-container .cd-popup-close::after {
+.cd-popup-container .cd-popup-close::before,
+.cd-popup-container .cd-popup-close::after {
     content: '';
     position: absolute;
     top: 12px;
@@ -173,4 +177,14 @@ xpopup
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0);
+}
+
+.cd-buttons {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0 !important;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0 !important;
 }

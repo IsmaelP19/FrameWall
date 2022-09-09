@@ -8,8 +8,7 @@
 
 
     <!--Bootstrap import-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
@@ -20,7 +19,10 @@
 
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/docs/js/utils/include.js"> </script>
+    <script src="/docs/js/utils/include.js"></script>
+
+    <script src="js/login.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
 
     <link rel="icon" href="/docs/images/logo/logo_small_icon_only.png">
 
@@ -32,12 +34,10 @@
         <!-- Este menú será el header de la página en modo invitado -->
 
         <!-- Muestra sólo en las pantallas de móviles y medianas (tablets, por ejemplo) -->
-        <a href="index.html" style="margin: auto;">    
+        <a href="index.html" style="margin: auto;">
             <img src="images/logo/logo_small_icon_only.png" id="logo-pequenio" class="navbar-brand d-lg-none d-md-none">
         </a>
-            <button class="navbar-toggler d-lg-none d-md-none" type="button" id="toggler" data-toggle="collapse"
-            data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false"
-            aria-label="Toggle navigation">
+        <button class="navbar-toggler d-lg-none d-md-none" type="button" id="toggler" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -64,8 +64,8 @@
             </a>
 
 
-            <button class="button-menu2 d-none d-lg-inline d-md-inline" id="boton4" role="link" onclick="location.href='signup.html'">
-                <a href="form.html" class="text2">Registrarse</a>
+            <button class="button-menu2 d-none d-lg-inline d-md-inline" id="boton4" role="link" onclick="location.href='register.html'">
+                <a href="register.html" class="text2">Registrarse</a>
             </button>
         </ul>
 
@@ -75,8 +75,12 @@
     <br>
     <br>
 
-   
-    <form id="myForm" action="/docs/index-user.html">
+    <div class="container-flex" id="errors"></div>
+
+
+
+    <!--
+    <form method="POST" id="myForm-Login" class="myForm">
 
         <div class="col-1 col-sm-2 col-md-3 col-lg-4"></div>
         <div class="form-login col-10 col-sm-8 col-md-6 col-lg-4 ">
@@ -84,25 +88,19 @@
             <h2>Iniciar sesión</h2>
             <br>
 
-            <p>Nombre de usuario</p>
-            <input type="text" id="userName" class="form-control input-sm chat-input"
-                placeholder="Introduce tu nombre de usuario" required />
+            <h5>Nombre de usuario</h5>
+            <input type="text" id="userName-login" name="userName" class="form-control input-sm chat-input" placeholder="Introduce tu nombre de usuario" />
             <br>
             <br>
-            <p>Contraseña</p>
-            <input type="password" id="userPassword" class="form-control input-sm chat-input"
-                placeholder="Introduce tu contraseña" required/>
+            <h5>Contraseña</h5>
+            <input type="password" id="userPassword-login" name="password" class="form-control input-sm chat-input" placeholder="Introduce tu contraseña" />
             </br>
             <br>
             <br>
-            
+
             <div class="wrapper">
-                <input type="submit" class="login-btn text1" value="Entrar">
-                <!--
-                <button class="button-menu1 " id="login-btn" role="link" onclick="location.href='index.html'">
-                    <a href="index.html" class="text1">Entrar</a>
-                </button>
-                -->
+                <input type="submit" value="Entrar" id="submit-btn-login" class="login-btn text1"></input>
+
             </div>
         </div>
         <div class="col-1 col-sm-2 col-md-3 col-lg-4"></div>
@@ -110,8 +108,51 @@
 
 
     </form>
+    -->
 
 
+    <form id="myForm" class="form-register">
+
+        <div class="form-register__body " id="form-register__body">
+            <div class="step active">
+                <div class="step__header">
+                    <h2 class="step__title">Iniciar sesión</h2>
+                </div>
+                <div class="step__body">
+                    <h5 class="step__input__title">Nombre de usuario</h5>
+                    <input type="text" name="userName" id="inputUsername" placeholder="Introduce tu nombre de usuario" class="step__input form-control input-sm chat-input">
+
+                    <br>
+
+                    <h5 class="step__input__title">Contraseña</h5>
+                    <input type="password" name="password" id="inputPasswd" placeholder="Introduce tu constraseña" class="step__input form-control input-sm chat-input">
+
+                    <br>
+
+                </div>
+
+
+                <div class="container-flex">
+                    <input type="submit" value="Iniciar sesión" id="submit-btn" class="submit-button"></input>
+                </div>
+
+
+            </div>
+        </div>
+
+    </form>
+
+
+    <div id="github-footer"></div>
+
+
+
+
+    <script>
+        include("footer-gh.html", "#github-footer");
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 

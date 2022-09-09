@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.00">
+    <title>Frame Wall</title>
+
+
+    <!--Bootstrap import-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/style-navbar.css">
+    <!--Primero tenemos que añadir Bootstrap porque si no el navbar-toggler-icon no se muestra-->
+
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/docs/js/utils/include.js"></script>
+
+    <script src="js/category.js" type="module"></script>
+    <script src="js/libs/axios.min.js"></script>
+
+
+    <link rel="icon" href="/docs/images/logo/logo_small_icon_only.png">
+
+</head>
+
+<body>
+    <nav id="page-header"></nav>
+
+    <button id="back-btn" onclick="goBack()">
+        &lt;
+    </button>
+
+
+
+    <div id="body">
+
+        <div id="errors" class="container-flex margin-top"></div>
+
+        <!--
+        <div class="row">
+            <div class="col-1 col-sm-2 col-md-4 col-lg-3 col-xl-3"></div>
+            <div class="col-10 col-sm-8 col-md-6 col-lg-6 col-xl-6">
+                <div class="contenedor">
+
+                    <span class="title" id="cat-title">Paisajes</span>
+
+                </div>
+            </div>
+            <div class="col-1 col-sm-2 col-md-4 col-lg-3 col-xl-3 "></div>
+        </div>
+
+
+        <!--Fotos de la galería
+        <div class="row">
+            <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+
+            <div class="col-10 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <div class="grid-gallery" id="category-gallery">
+                    <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="images/paisajes/web/Raster-2.jpg" id="foto1">
+                    </a>
+                    <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="images/paisajes/web/Raster-1.jpg" id="foto2">
+                    </a>
+                    <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="images/paisajes/web/Raster-3.jpg" id="foto3">
+                    </a>
+                    <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="images/paisajes/web/Raster-4.jpg" id="foto4">
+                    </a>
+                    <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="images/paisajes/web/Raster-5.jpg" id="foto5">
+                    </a>
+                    <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="images/paisajes/web/Raster-6.jpg" id="foto6">
+                    </a>
+                    <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="images/paisajes/web/Raster-7.jpg" id="foto7">
+                    </a>
+                    <a class="grid-gallery__item" href="#">
+                        <img class="grid-gallery__image" src="images/paisajes/web/Raster-8.jpg" id="foto8">
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="col-1 col-sm-2 col-md-2 col-lg-2 col-xl-2"></div>
+        </div>
+        -->
+    </div>
+
+
+
+    <!--Menú de paginación inferior
+    <nav>
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+            <li class="page-item active disabled"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="paisajes-2.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+            <li class="page-item"><a class="page-link" href="#">22</a></li>
+            <li class="page-item">
+                <a class="page-link" href="paisajes-2.html" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    -->
+
+
+    <div id="github-footer"></div>
+
+
+
+    <script src="/docs/js/utils/utils.js"></script>
+
+
+    <script>
+        include("footer-gh.html", "#github-footer");
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+
+</html>
