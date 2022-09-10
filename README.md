@@ -46,7 +46,7 @@ FrameWall is a simple and fast photography social network. It is built with Sile
 
 8. If you have reached this point, you should be able to run correctly the project. To do so, run the following command: `silence run`.
 
-9. At this point, you should be able to access the project from the following link: [http://localhost:8080](http://localhost:5000). 
+9. At this point, you should be able to access the project from the following link: [http://localhost:8080](http://localhost:8080). 
 
 ***NB: The following option is not implemented. This is the exact state of the project once delivered in the final assignment.***
 
