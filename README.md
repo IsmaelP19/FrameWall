@@ -26,7 +26,7 @@ FrameWall is a simple and fast photography social network. It is built with Sile
 7. At this point, we have all the prerequisites installed. Now we will clone the project. To do so, we open a new command prompt and execute the following commands:
     
     ```
-    git clone https://github.com/IsmaelP19/Proyecto-FrameWall
+    git clone https://github.com/IsmaelP19/Proyecto-FrameWall.git
   
     cd Proyecto-FrameWall
   
@@ -48,3 +48,14 @@ FrameWall is a simple and fast photography social network. It is built with Sile
 
 9. At this point, you should be able to access the project from the following link: [http://localhost:8080](http://localhost:5000). 
 
+***NB: The following option is not implemented. This is the exact state of the project once delivered in the final assignment.***
+
+## Screenshots 
+![Home](/docs/images/readme-images/index-hover.png)
+![Sign up](/docs/images/readme-images/sign-up-completed.png)
+![Sign in](/docs/images/readme-images/login.png)
+![Upload a photo](/docs/images/readme-images/upload-photo.png)
+![Photo detail](/docs/images/readme-images/view-own-photo.png)
+![Profile](/docs/images/readme-images/own-profile.png)
+![Photo detail](/docs/images/readme-images/view-other-photo.png)
+![Other profile](/docs/images/readme-images/another-profile.png)
