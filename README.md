@@ -48,7 +48,7 @@ FrameWall is a simple and fast photography social network. It is built with Sile
 
 9. At this point, you should be able to access the project from the following link: [http://localhost:8080](http://localhost:8080). 
 
-***NB: The following option is not implemented. This is the exact state of the project once delivered in the final assignment.***
+***NB: The*** `following` ***option is not implemented. This is the exact state of the project once delivered in the final assignment.***
 
 ## Screenshots 
 ![Home](/docs/images/readme-images/index-hover.png)
